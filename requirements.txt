@@ -1,0 +1,30 @@
+gp_admin/
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── models/
+│   │   ├── __init__.py
+│   │   └── models.py
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   └── schemas.py
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   ├── entreprise.py
+│   │   ├── employe.py
+│   │   └── pointage.py
+│   ├── database.py
+│   └── utils.py
+├── requirements.txt
+└── README.md
+
+
+_______dépendence______
+
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+psycopg2-binary
+
+_______________________
