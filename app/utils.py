@@ -13,3 +13,11 @@ def generate_code_unique(db: Session):
         code = random.randint(1000, 9999)
         if code not in existing_codes:
             return code
+
+def generate_employee_code(db: Session):
+    """Génère un code employé unique à 4 chiffres"""
+    existing_codes = {e.employee_code for e in db.query(Employe).filter(Employe.employee_code.isnot(None)).all()}
+    while True:
+        code = str(random.randint(1000, 9999))
+        if code not in existing_codes:
+            return code
